@@ -1,0 +1,153 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor2}{rgb}{0.46667,0.67451,0.18824}%
+\definecolor{mycolor3}{rgb}{0.49412,0.49412,0.49412}%
+
+\definecolor{mycolor111}{rgb}{0.00000,0.44700,0.74100}%
+
+\definecolor{mycolor4}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor5}{rgb}{0.85098,0.32549,0.09804}%
+\definecolor{mycolor6}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor7}{rgb}{0.92941,0.69412,0.12549}%
+\definecolor{mycolor8}{rgb}{0.49400,0.18400,0.55600}%
+\definecolor{mycolor9}{rgb}{0.49412,0.18431,0.55686}%
+\definecolor{mycolor10}{rgb}{0.46600,0.67400,0.18800}%
+\definecolor{mycolor11}{rgb}{0.46667,0.67451,0.18824}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=3.955in,
+height=2.637in,
+at={(6.647in,4.513in)},
+scale only axis,
+%bar shift auto,
+bar width=8.123,
+xmin=0.5,
+xmax=5.5,
+xtick={1,2,3,4,5},
+xticklabels={{D},{D+PPI},{DO},{DO+PPI},{+cis(+PPI)}},
+ymin=0,
+ymax=1,
+ytick={0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+yticklabels={{10\%},{20\%},{30\%},{40\%},{50\%},{60\%},{70\%},{80\%},{90\%},{100\%}},
+ylabel style={font=\color{white!15!black}},
+ylabel={$P_v$},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={(A)},
+ymajorgrids,
+grid style={dashed},
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot[ybar, pattern=horizontal lines, bar width=8.123, fill=mycolor1, draw=black, area legend] table[row sep=crcr] {%
+.8	0.6\\
+1.8	0.7\\
+2.8	0.6\\
+3.8	0.65\\
+4.8	1\\
+};
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+0.5	0\\
+5.5	0\\
+};
+\addlegendentry{k=2}
+
+\addplot[ybar, bar width=8.123, fill=mycolor2, draw=black, area legend] table[row sep=crcr] {%
+1	0.52\\
+2	0.74\\
+3	0.52\\
+4	0.66\\
+5	1\\
+};
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+0.5	0\\
+5.5	0\\
+};
+\addlegendentry{k=3}
+
+\addplot[ybar, bar width=8.123, fill=mycolor3, draw=black, area legend] table[row sep=crcr] {%
+1.2	0.5\\
+2.2	0.8\\
+3.2	0.5\\
+4.2	0.69\\
+5.2	1\\
+};
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+0.5	0\\
+5.5	0\\
+};
+\addlegendentry{k=4}
+
+\end{axis}
+
+\begin{axis}[%
+width=3.705in,
+height=2.47in,
+at={(6.773in,1in)},
+scale only axis,
+xmin=0.75,
+xmax=3.25,
+xtick={1,2,3},
+xticklabels={{\textit{k}=2},{\textit{k}=3},{\textit{k}=4}},
+ymin=0,
+ymax=1.1,
+ytick={0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+yticklabels={{10\%},{20\%},{30\%},{40\%},{50\%},{60\%},{70\%},{80\%},{90\%},{100\%}},
+ylabel style={font=\color{white!15!black}},
+ylabel={$P_{fv}$},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={{\large (B)}},
+ymajorgrids,
+grid style={dashed},
+legend style={at={(.5,-0.15)}, anchor=base, legend columns=5, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor111, dotted, line width=2.0pt, mark size=2.5pt, mark=square*, mark options={solid, fill=mycolor2, mycolor111}]
+  table[row sep=crcr]{%
+1	0.1\\
+2	0.02\\
+3	0\\
+};
+\addlegendentry{D}
+
+\addplot [color=mycolor4, dotted, line width=2.0pt, mark size=4.0pt, mark=diamond*, mark options={solid, fill=mycolor5, mycolor4}]
+  table[row sep=crcr]{%
+1	0.2\\
+2	0.11\\
+3	0.06\\
+};
+\addlegendentry{D+PPI}
+
+\addplot [color=mycolor6, line width=2.0pt, mark size=2.5pt, mark=square*, mark options={solid, fill=mycolor7, mycolor6}]
+  table[row sep=crcr]{%
+1	0.4\\
+2	0.15\\
+3	0.06\\
+};
+\addlegendentry{DO}
+
+\addplot [color=mycolor8, line width=2.0pt, mark size=4.0pt, mark=diamond*, mark options={solid, fill=mycolor9, mycolor8}]
+  table[row sep=crcr]{%
+1	0.5\\
+2	0.38\\
+3	0.3\\
+};
+\addlegendentry{DO+PPI}
+
+\addplot [color=mycolor10, dashed, line width=2.0pt, mark=*, mark options={solid, fill=mycolor11, mycolor10}]
+  table[row sep=crcr]{%
+1	1\\
+2	1\\
+3	1\\
+};
+\addlegendentry{cis(+PPI)}
+
+\end{axis}
+\end{tikzpicture}%
+
